@@ -1,0 +1,45 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    margin: 0;
+    
+}
+
+header{
+    padding: 20px;
+    background-color: #3f3f3f;
+}
+.aca{
+    background-color: #3f3f3f;
+}
+.aja{
+    margin-top: 2%;
+    margin-right: 2%;
+    float: right;
+}
+.aa{
+    width: 200px;
+}
+.txt{
+   
+    
+}
+.txt1{
+    text-align: center;
+}
+
+td {
+    border: 2px solid rgb(54, 54, 54);
+}
+thead{
+    background-color: #686565;
+}
+footer{
+    padding: 15px;
+    background-color: #3f3f3f;
+}

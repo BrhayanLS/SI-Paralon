@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:html="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Entrada</title>
+
+        <link rel="shortcut icon" href="../images/diamante.png"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"/>
+        <link rel="stylesheet" href="../css/css.css"/>
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"/>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+        <!-- Required meta tags -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css"/>
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+        <!-- MDB -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"/>
+        <!-- Bootstrap core CSS -->
+        <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+        <!-- Datatables -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.css"/>
+        <script src="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.js"></script>
+        <!--font awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <!-- Buttons -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css"/>
+        <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+        <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.53/build/pdfmake.min.js"></script>
+        <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.53/build/vfs_fonts.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.html5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"></script>
+    </h:head>
+    <h:body>
+        <header>
+            <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white " >
+                <div class="position-sticky">
+                    <div class="list-group list-group-flush mx-3 mt-2">
+                        <a href="inicioProduccion.xhtml" class="list-group-item list-group-item-action  py-1 ripple">
+                            <span style="color: #4067b0;">INVENTARIO</span>
+                        </a>
+                        <h:link outcome="ResgistrarProveedor.xhtml" class="list-group-item list-group-item-action py-1 ripple mt-2">
+                            <i class="fa-solid fa-user-plus me-3"></i><span>Registrar Proveedor</span>
+                        </h:link>
+                        <h:link outcome="HistorialProveedores.xhtml" class="list-group-item list-group-item-action py-1 ripple mt-2">
+                            <i class="fa-solid fa-box-open me-3"></i><span>Historial de Proveedores</span>
+                        </h:link>
+                        <h:link outcome="EntradaInventario.xhtml" class="list-group-item list-group-item-action py-1 ripple  active">
+                            <i class="fa-solid fa-industry"></i> <span>Entrada Inventario</span>
+                        </h:link>
+                        <h:link outcome="SalidaInventario.xhtml" class="list-group-item list-group-item-action py-1 ripple mt-2">
+                            <i class="fa-solid fa-boxes-stacked me-3"></i><span>Salida Invntario</span>
+                        </h:link>
+                        <h:link outcome="RegistrarInventario.xhtml" class="list-group-item list-group-item-action py-1 ripple mt-2">
+                            <i class="fa-solid fa-clipboard-list me-3"></i><span>Registrar Inventario</span>
+                        </h:link>
+                        <div class="d-grid text-black mt-4" id="b"  >       
+                            <a onclick="confirmarSalida()" class="btn btn-secundary btn-user btn-block">Salir</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation" >
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="../images/unnamed.png" 
+                             height="33"
+                             alt="logop"
+                             loading="lazy"
+                             />
+                    </a>
+                    <form class="d-none d-md-flex input-group w-auto my-auto" style="height: 2rem;"></form>
+
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item" href="#">My profile</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Settings</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <br/>
+        <main class="mt-5">
+            <div class="container">
+                <div class="row justify-content-center ">
+                    <div class="col-md-12">
+                        <div class="card card-body">
+                            <h3 class="card-titile text-primary" style="text-align:center">
+                                REGISTRAR ENTRADA DEL INVENTARIO
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <main class="mt-5">
+            <div class="container">
+                <div class="row justify-content-center ">
+                    <div class="col-6">
+                        <div class="card card-body">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../images/istockphoto-1211174602-1024x1024.jpg" class="img-fluid rounded-start" alt="..."/>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Entrada de iventario</h5>
+                                        <p class="card-text">Si tiene algun reporte sobre el registro de entrada del inventario por favor envie al siguiente correo</p>
+
+
+
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">enviar reporte</button>
+
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Reporte</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form>
+                                                            <div class="mb-3">
+                                                                <label for="recipient-name" class="col-form-label">Correo:</label>
+                                                                <input type="text" class="form-control" id="recipient-name"/>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="message-text" class="col-form-label">Mensage:</label>
+                                                                <textarea class="form-control" id="message-text"></textarea>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                        <button type="button" class="btn btn-primary">Enviar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <h:form>
+                            <div class="card-dialog ">
+                                <div class="card-content">
+                                    <div class="card-header">
+                                        <h5 class="card-title" id="exampleModalLabel">Entrada de inventario</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row justify-content-center ">
+                                            <div class="col-12">
+                                                <h:form  class=" row g-4 ">
+                                                    <div class="col-md-12">
+                                                        <div class="form-label">
+                                                            <h:inputText class="form-control" html:placeholder="Codigo producto"></h:inputText>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-label">
+                                                            <h:inputText class="form-control" html:placeholder="Cantidad del producto"></h:inputText>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-label">
+                                                            <h:inputText class="form-control" html:placeholder="Fecha de entrada"></h:inputText>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12">
+                                                        <div class="form-label">
+                                                            <h:inputText class="form-control" html:placeholder="Proveedor"></h:inputText>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-label">
+                                                            <h:inputText class="form-control" html:placeholder="Empleado que recibe"></h:inputText>
+                                                        </div>
+                                                    </div>
+                                                </h:form> 
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-primary">Registrar entrada</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </h:form>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <main class="mt-5">
+            <div class="container">
+                <div class="row justify-content-center ">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <h:dataTable class="table table-hover table-bordered border-danger text-center" id="botones" var="t">
+                                <h:column>
+                                    <f:facet name="header">ID</f:facet>
+                                    <h:outputText/>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Codigo producto</f:facet>
+                                    <h:outputText />
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Fecha entrada</f:facet>
+                                    <h:outputText />
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">proveedor</f:facet>
+                                    <h:outputText />
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">cantidad</f:facet>
+                                    <h:outputText/>
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">recibe</f:facet>
+                                    <h:outputText/>
+                                </h:column>
+
+
+                                <h:column>
+                                    <f:facet name="header">Acciones</f:facet>
+                                    <h:form>
+
+                                        <h:commandButton value="Eliminar"></h:commandButton>
+                                        <h:commandButton value="Actualizar"></h:commandButton>
+                                    </h:form>
+                                </h:column>
+                            </h:dataTable>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            $(document).ready(function () {
+                $('#botones').DataTable({
+                    dom: 'Bfrtip',
+                    buttons: [
+                        'copy', 'csv', 'excel', 'pdf', 'print'
+                    ]
+                });
+            });
+        </script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </h:body>
+</html>
